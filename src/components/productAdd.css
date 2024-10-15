@@ -1,0 +1,210 @@
+
+
+:root{
+    /* font-family: "Raleway", sans-serif; */
+    /* font-family: "Nunito", sans-serif; */
+    /* font-family: "Quicksand", sans-serif; */
+    font-family: "Lato", sans-serif;
+    /* font-family: "Grandstander", sans-serif; */
+--primary: #303841;
+    --secondry: #D6E6F2;
+    --text: #F5F5F5;
+    --accent: #FFF200;
+    --earth-yellow: #dda15eff;
+    --dark-moss-green: #606c38ff;
+    --cornsilk: #fefae0ff;
+    --pakistan-green: #283618ff;
+    --tigers-eye: #bc6c25ff;
+
+    --delft-blue: #29335cff;
+    --orange-web: #f3a712ff;
+    --flame: #e4572eff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font2);
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* width: 400px; */
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-container .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form-container .form-group textarea {
+    resize: none;
+  }
+  
+  .form-container .form-group small {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+  }
+  
+  .form-container .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .form-container .input-half {
+    flex: 1;
+  }
+
+  .productAdd-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* width: 600px; */
+  }
+  
+  .productAdd-upload-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .productAdd-image-box {
+    width: 100px;
+    height:100px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .productAdd-image-box img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .productAdd-upload-placeholder {
+    border-style: dashed;
+    color: #888;
+    text-align: center;
+  }
+  
+  .productAdd-upload-placeholder a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .productAdd-description {
+    margin: 15px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .productAdd-input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .productAdd-select-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .productAdd-select-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .productAdd-select-group select,
+  .productAdd-select-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .productAdd-sizes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  
+  .productAdd-sizes button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .productAdd-sizes button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .productAdd-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .productAdd-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-btn {
+    background-color: var(--flame);
+    border: none;
+    color: white;
+  }
+  
+  .psave-btn {
+    /* background-color: var(--orange-web); */
+    background-color: transparent;
+    border: 1px solid var(--flame);
+    color: var(--flame);
+  }
+  
+  .schedule-btn {
+    color: var(--delft-blue);
+    border: none;
+    background: transparent;
+  }
+  
+  .productAdd-buttons button:hover {
+    opacity: 0.8;
+  }

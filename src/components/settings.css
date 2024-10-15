@@ -1,0 +1,127 @@
+:root {
+    /*
+    --white: #fff;
+    --font1: "Raleway", sans-serif; */
+    --font2: "Nunito", sans-serif;
+    --primary: #303841;
+    --secondry: #D6E6F2;
+    --text: #F5F5F5;
+    /* --accent: #FFF200; */
+    --earth-yellow: #dda15eff;
+    --dark-moss-green: #606c38ff;
+    --cornsilk: #fefae0ff;
+    --pakistan-green: #283618ff;
+    --tigers-eye: #bc6c25ff;
+
+    --delft-blue: #29335cff;
+    --orange-web: #f3a712ff;
+    --flame: #e4572eff;
+}
+.seller-settings {
+    /* width: 85%; */
+    float: right;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.seller-settings h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.seller-settings .settings-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.seller-settings .settings-tabs button {
+    padding: 10px 20px;
+    border:none;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px 5px 0 0;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ .seller-settings .settings-tabs button:hover , .active{
+    /* background-color:var(--flame) ; */
+    color: var(--delft-blue);
+    border-bottom: 1px solid var(--delft-blue);
+}
+
+.seller-settings .settings-tabs .active {
+    /* background-color:var(--delft-blue) ; */
+    color: var(--delft-blue);
+    border-bottom: 1px solid var(--delft-blue);
+}
+
+.seller-settings .tab-content {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.seller-settings .tab-content h3 {
+    color: #333;
+}
+
+.seller-settings form {
+    display: flex;
+    flex-direction: column;
+}
+
+.seller-settings form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.seller-settings form input[type="text"],
+.seller-settings form input[type="email"],
+.seller-settings form input[type="tel"],
+.seller-settings form input[type="url"],
+.seller-settings form input[type="file"],
+.seller-settings form select,
+.seller-settings form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.seller-settings form input[type="file"] {
+    padding: 3px;
+}
+
+.seller-settings form button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a4a88;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seller-settings form button[type="submit"]:hover {
+    background-color: #303841;
+}
+
+.seller-settings form textarea {
+    resize: vertical;
+}
+
+.seller-settings form input[type="checkbox"] {
+    margin-right: 10px;
+}

@@ -1,0 +1,189 @@
+:root {
+  /*
+    --white: #fff;
+    --font1: "Raleway", sans-serif; */
+  --font2: "Nunito", sans-serif;
+  --primary: #303841;
+  --secondry: #D6E6F2;
+  --text: #F5F5F5;
+  /* --accent: #FFF200; */
+  --earth-yellow: #dda15eff;
+  --dark-moss-green: #606c38ff;
+  --cornsilk: #fefae0ff;
+  --pakistan-green: #283618ff;
+  --tigers-eye: #bc6c25ff;
+--hover:#3a4a88;
+  --delft-blue: #29335cff;
+  --orange-web: #f3a712ff;
+  --flame: #e4572eff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font2);
+}
+/* General styles for the customer page */
+.customer {
+  color: #333;
+  padding:10px;
+  float: right;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* Section Titles */
+.customer-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--delft-blue);
+  border-bottom: 2px solid var(--delft-blue);
+  padding-bottom: 10px;
+}
+
+/* Customer Info and Details */
+.customer-info,
+.purchase-history,
+.engagement-metrics,
+.communication-history,
+.customer-actions {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customer-info:hover,
+.purchase-history:hover,
+.engagement-metrics:hover,
+.communication-history:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.customer-details p {
+  font-size: 1.05rem;
+  margin: 5px 0;
+}
+
+.customer-details p strong {
+  font-weight: bold;
+  color: #34495e;
+}
+
+/* Purchase History Table */
+.purchase-history table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+}
+
+.purchase-history th,
+.purchase-history td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.purchase-history th {
+  background-color: var(--delft-blue);
+  color: #fff;
+  font-weight: bold;
+}
+
+.purchase-history tr:hover {
+  background-color: #f1f2f6;
+}
+
+.purchase-history td span {
+  display: inline-block;
+  background-color: var(--delft-blue);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+/* Metrics Section */
+.metrics p {
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.metrics p strong {
+  color: var(--delft-blue);
+  font-size: 1.1rem;
+}
+
+/* Communication History */
+.communication-history ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.communication-history li {
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--delft-blue);
+}
+
+.communication-history li strong {
+  color: var(--hover);
+}
+
+/* Actions Section */
+.customer-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customer-actions button {
+  background-color: var(--delft-blue);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.customer-actions button:hover {
+  background-color: var(--hover);
+  transform: translateY(-3px);
+}
+
+.customer-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .customer-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .purchase-history table,
+  .purchase-history th,
+  .purchase-history td {
+    font-size: 0.875rem;
+  }
+
+  .metrics p {
+    font-size: 0.875rem;
+  }
+
+  .navbar {
+    width: 200px;
+  }
+}

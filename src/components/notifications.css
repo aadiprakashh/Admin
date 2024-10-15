@@ -1,0 +1,61 @@
+.notifications {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    /* Center the title */
+}
+
+.notification-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notification-item {
+    display: flex;
+    /* Use flex for better alignment */
+    align-items: center;
+    /* Center items vertically */
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.notification-item:hover {
+    background-color: #e9ecef;
+}
+
+.notification-icon {
+    width: 40px;
+    /* Set a fixed width for the icon */
+    height: 40px;
+    /* Set a fixed height for the icon */
+    margin-right: 15px;
+    /* Space between icon and text */
+}
+
+.notification-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #212529;
+}
+
+.notification-content small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+    font-size: 14px;
+    /* Slightly smaller font for the date */
+}

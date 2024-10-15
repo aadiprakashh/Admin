@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="contaniner-fluid" id="home">
+        <div class="menubar">
+            <!-- <div class="context"> -->
+            <img src="../assets/white-transparent.png" alt="" class="logo">
+            <div class="menu">
+                <a href="#sales" class="active"><img src="../assets/sales.png"> Sales</a>
+                <a href="#order"><img src="../assets//order.png" alt=""> Order</a>
+                <a href="#product"><img src="../assets/project.png" alt=""> Product</a>
+                <a href="#customer"><img src="../assets/Customer.png" alt=""> Customer</a>
+                <a href="#performance"><img src="../assets/performance.png" alt=""> Performance</a><a
+                    href="#profile"><img src="../assets/profile.png" alt=""> Profile</a>
+                <a href="#profile"><img src="../assets/Settings.png" alt=""> Settings</a>
+                <a href="#profile"><img src="../assets/Sign In.png" alt=""> Sign in</a>
+            </div>
+            
+        </div>
+
+        <!-- <div class="sales">
+            <h1>Sales</h1>
+            <div class="sales-content">
+                <div class="sales-data">
+                    <div class="sales-card">
+                        <div class="cardTop">
+                            <img src="../assets/sales-card.png" alt="">
+                            <div class="sales-details">
+                                <h5>Total Sales</h5>
+                                <h3>₹1,000</h3>
+                            </div>
+                        </div>
+                        <div class="sales-stocks">
+                            8% from yesterday
+                        </div>
+                    </div>
+                    <div class="sales-card">
+                        <div class="cardTop">
+                            <img src="../assets/revenue.png" alt="">
+                            <div class="sales-details">
+                                <h5>Total Revenue</h5>
+                                <h3>₹45,000</h3>
+                            </div>
+                        </div>
+                        <div class="sales-stocks">
+                            8% from yesterday
+                        </div>
+                    </div>
+                    <div class="sales-card">
+                        <div class="cardTop">
+                            <img src="../assets/orders.png" alt="">
+                            <div class="sales-details">
+                                <h5>Total Orders</h5>
+                                <h3>₹1,000</h3>
+                            </div>
+                        </div>
+                        <div class="sales-stocks">
+                            8% from yesterday
+                        </div>
+                    </div>
+                    <div class="sales-card">
+                        <div class="cardTop">
+                            <img src="../assets/aov.png" alt="">
+                            <div class="sales-details">
+                                <h5>Average Spend</h5>
+                                <h3>₹45.00</h3>
+                            </div>
+                        </div>
+                        <div class="sales-stocks">
+                            8% from yesterday
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-graph">
+                
+                    <div class="sales-btn">
+                        <button id="dailyBtn" class="active" onclick="updateCharts('daily')">Daily</button>
+                        <button id="weeklyBtn" onclick="updateCharts('weekly')">Weekly</button>
+                        <button id="monthlyBtn" onclick="updateCharts('monthly')">Monthly</button>
+                    </div>
+
+                    <div class="strend">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sales Trend Overview</h5>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>home</li>
+                                        <li>home</li>
+                                        <li>home</li>
+                                        <li>home</li>
+                                    </ul>
+                                    <ul>
+                                        <li>sub-home</li>
+                                        <li>sub-home</li>
+                                        <li>sub-home</li>
+                                        <li>sub-home</li>
+                                    </ul>
+                                </div>
+                                <div class="mini-chart">
+                                    <canvas id="salesTrendChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Selling Products</h5>
+                                <div class="card-text">
+                                    <p><strong>Top Product:</strong> Product A</p>
+                                    <p><strong>Units Sold:</strong></p>
+                                    <ul>
+                                        <li>Product A: 500 units</li>
+                                        <li>Product B: 400 units</li>
+                                        <li>Product C: 300 units</li>
+                                        <li>Product D: 200 units</li>
+                                        <li>Product E: 100 units</li>
+                                    </ul>
+                                </div>
+                               
+                                <div class="mini-chart">
+                                    <canvas id="topSellingProductsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Sales by Category</h5>
+                                <div class="card-text">
+                                    <p><strong>Top Category:</strong> Category A</p>
+                                    <p><strong>Sales Distribution:</strong></p>
+                                    <ul>
+                                        <li>Category A: X%</li>
+                                        <li>Category B: Y%</li>
+                                        <li>Category C: Z%</li>
+                                        <li>Category D: A%</li>
+                                        <li>Category E: B%</li>
+                                    </ul>
+                                </div>
+                                <div class="mini-chart">
+                                    <canvas id="salesByCategoryChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Conversion Rate Overview</h5>
+                                <div class="card-text">
+                                    <p><strong>Conversion Rate:</strong> 65%</p>
+                                    <p><strong>Converted:</strong> 130</p>
+                                    <p><strong>Not Converted:</strong> 70</p>
+                                </div>
+                                <div class="mini-chart">
+                                    <canvas id="conversionRateChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Revenue by Product</h5>
+                                <div class="card-text">
+                                    <p><strong>Top Performing Product:</strong> Product A</p>
+                                    <p><strong>Lowest Performing Product:</strong> Product E</p>
+                                    <p><strong>Overall Insights:</strong> The radar chart illustrates how revenue is distributed across
+                                        different products. Product A is leading, while Product E is trailing in terms of revenue generation.
+                                    </p>
+                                </div>
+                                <div class="mini-chart">
+                                    <canvas id="revenueByProductChart"></canvas>
+                                  
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                 
+                </div>
+            </div>
+        </div> -->
+
+        <div class="product">
+            <div class="product-header">
+                <h1>Product Management</h1>
+                <div class="product-action">
+                    <input type="search" name="" id="" placeholder="SKU, Price, Stock Level">
+                    <button class="addbtn"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Product</button>
+                </div>
+            </div>
+
+
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="script.js"></script> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sample chart data for daily, weekly, and monthly periods
+    const chartData = {
+        salesTrendChart: {
+            daily: [100, 150, 130, 170, 120, 160, 180],
+            weekly: [700, 850, 780, 900, 760, 820, 840],
+            monthly: [2800, 3100, 3000, 3200, 2900, 3100, 3050]
+        },
+        topSellingProductsChart: {
+            daily: [140, 120, 100, 95, 90],
+            weekly: [1000, 900, 800, 750, 700],
+            monthly: [4000, 3600, 3200, 3000, 2700]
+        },
+        salesByCategoryChart: {
+            daily: [280, 150, 110, 90, 50],
+            weekly: [2000, 1300, 1000, 800, 500],
+            monthly: [8000, 5200, 4000, 3500, 2000]
+        },
+        conversionRateChart: {
+            daily: [3.75, 96.25],
+            weekly: [25, 175],
+            monthly: [100, 700]
+        },
+        revenueByProductChart: {
+            daily: [3500, 4800, 2500, 2850, 2700],
+            weekly: [24500, 33500, 17500, 19900, 18900],
+            monthly: [98000, 134000, 70000, 79600, 75600]
+        }
+    };
+
+    // Chart instances
+    var salesTrendChart = new Chart(document.getElementById('salesTrendChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: ['2024-09-01', '2024-09-02', '2024-09-03', '2024-09-04', '2024-09-05', '2024-09-06', '2024-09-07'],
+            datasets: [{ label: 'Sales Trend', data: chartData.salesTrendChart.daily, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgba(255, 99, 132, 1)', fill: false }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 14 // Font size for x-axis labels
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Date',
+                        font: {
+                            size: 18 // Font size for x-axis title
+                        }
+                    }
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            size: 14 // Font size for y-axis labels
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Sales',
+                        font: {
+                            size: 18 // Font size for y-axis title
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // Font size for legend labels
+                        }
+                    }
+                },
+                tooltip: {
+                    bodyFont: {
+                        size: 14 // Font size for tooltip body text
+                    },
+                    titleFont: {
+                        size: 16 // Font size for tooltip title text
+                    }
+                }
+            }
+        }
+    });
+
+
+    var topSellingProductsChart = new Chart(document.getElementById('topSellingProductsChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+            datasets: [{ label: 'Top Selling Products', data: chartData.topSellingProductsChart.daily, backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgba(54, 162, 235, 1)' }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 14 // Font size for x-axis labels
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Products',
+                        font: {
+                            size: 18 // Font size for x-axis title
+                        }
+                    }
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            size: 14 // Font size for y-axis labels
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Units Sold',
+                        font: {
+                            size: 18 // Font size for y-axis title
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // Font size for legend labels
+                        }
+                    }
+                },
+                tooltip: {
+                    bodyFont: {
+                        size: 14 // Font size for tooltip body text
+                    },
+                    titleFont: {
+                        size: 16 // Font size for tooltip title text
+                    }
+                }
+            }
+        }
+    });
+
+    var salesByCategoryChart = new Chart(document.getElementById('salesByCategoryChart').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
+            datasets: [{ label: 'Sales by Category', data: chartData.salesByCategoryChart.daily, backgroundColor: ['rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 99, 132, 0.2)'], borderColor: ['rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 99, 132, 1)'], borderWidth: 1 }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // Font size for legend labels
+                        }
+                    }
+                },
+                tooltip: {
+                    bodyFont: {
+                        size: 14 // Font size for tooltip body text
+                    },
+                    titleFont: {
+                        size: 16 // Font size for tooltip title text
+                    }
+                }
+            }
+        }
+    });
+
+    var conversionRateChart = new Chart(document.getElementById('conversionRateChart').getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Converted', 'Not Converted'],
+            datasets: [{ label: 'Conversion Rate', data: chartData.conversionRateChart.daily, backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 99, 132, 0.2)'], borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'], borderWidth: 1 }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // Font size for legend labels
+                        }
+                    }
+                },
+                tooltip: {
+                    bodyFont: {
+                        size: 14 // Font size for tooltip body text
+                    },
+                    titleFont: {
+                        size: 16 // Font size for tooltip title text
+                    }
+                }
+            }
+        }
+    });
+
+    var revenueByProductChart = new Chart(document.getElementById('revenueByProductChart').getContext('2d'), {
+        type: 'radar',
+        data: {
+            labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+            datasets: [{ label: 'Revenue by Product', data: chartData.revenueByProductChart.daily, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgba(255, 99, 132, 1)', fill: true }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            scales: {
+                r: {
+                    ticks: {
+                        font: {
+                            size: 14 // Font size for radar chart labels
+                        }
+                    },
+                    angleLines: {
+                        display: false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // Font size for legend labels
+                        }
+                    }
+                },
+                tooltip: {
+                    bodyFont: {
+                        size: 14 // Font size for tooltip body text
+                    },
+                    titleFont: {
+                        size: 16 // Font size for tooltip title text
+                    }
+                }
+            }
+        }
+    });
+
+    function updateCharts(period) {
+        salesTrendChart.data.datasets[0].data = chartData.salesTrendChart[period];
+        salesTrendChart.update();
+        topSellingProductsChart.data.datasets[0].data = chartData.topSellingProductsChart[period];
+        topSellingProductsChart.update();
+        salesByCategoryChart.data.datasets[0].data = chartData.salesByCategoryChart[period];
+        salesByCategoryChart.update();
+        conversionRateChart.data.datasets[0].data = chartData.conversionRateChart[period];
+        conversionRateChart.update();
+        revenueByProductChart.data.datasets[0].data = chartData.revenueByProductChart[period];
+        revenueByProductChart.update();
+    }
+
+    // Initial chart setup
+    updateCharts('daily');
+</script>
+
+</html>

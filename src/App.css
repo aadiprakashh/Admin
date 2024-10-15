@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Raleway", sans-serif; */
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: "Lato", sans-serif;
+  /* font-family: "Grandstander", sans-serif; */
+  --primary: #303841;
+  --secondry: #D6E6F2;
+  --text: #F5F5F5;
+  --accent: #FFF200;
+  --earth-yellow: #dda15eff;
+  --dark-moss-green: #606c38ff;
+  --cornsilk: #fefae0ff;
+  --pakistan-green: #283618ff;
+  --tigers-eye: #bc6c25ff;
+
+  --delft-blue: #29335cff;
+  --orange-web: #f3a712ff;
+  --flame: #e4572eff;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.app-content {
+  /* margin-left: 250px; */
+  padding: 20px;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+
+}
