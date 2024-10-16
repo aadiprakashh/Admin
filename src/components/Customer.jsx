@@ -17,12 +17,14 @@ const handleExportData = (customerId) => {
 };
 
   return (
-    <div className="customer-page container-fluid">
+    <div className="customer-page col-md-12">
       {customerS.map((customer) => (
-        <div className="customer row col-md-10" key={customer.id}>
-          {/* Customer Information Section */}
-          <div className="customer-info">
-            <h2>Customer Information</h2>
+        <div className="customer col-md-10" key={customer.id}>
+
+        <div className="d-flex align-items-baseline justify-content-between">
+            {/* Customer Information Section */}
+            <div className="customer-info box col-md-4">
+            <h3>Customer Information</h3>
             <div className="customer-details">
               <p>
                 <strong>Name:</strong> {customer.name}
@@ -42,9 +44,48 @@ const handleExportData = (customerId) => {
             </div>
           </div>
 
+          {/* Engagement Metrics Section */}
+          <div className="engagement-metrics box col-md-4">
+            <h3>Engagement Metrics</h3>
+            <div className="metrics">
+              <p>
+                <strong>Lifetime Value (LTV):</strong> ${customer.lifetimeValue}
+              </p>
+              <p>
+                <strong>Average Order Value (AOV):</strong> $
+                {customer.averageOrderValue}
+              </p>
+              <p>
+                <strong>Number of Orders:</strong> {customer.orders.length}
+              </p>
+              <p>
+                <strong>Repeat Customer:</strong>{" "}
+                {customer.isRepeatCustomer ? "Yes" : "No"}
+              </p>
+            </div>
+          </div>
+
+          {/* Communication History Section */}
+          <div className="communication-history box col-md-4">
+            <h3>Communication History</h3>
+            {customer.messages.length ? (
+              <ul>
+                {customer.messages.map((message, index) => (
+                  <li key={index}>
+                    <strong>Date:</strong> {message.date} <br />
+                    <strong>Message:</strong> {message.content}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No communication history available.</p>
+            )}
+          </div>
+        </div>
+
           {/* Purchase History Section */}
           <div className="purchase-history">
-            <h2>Purchase History</h2>
+            <h3>Purchase History</h3>
             <table>
               <thead>
                 <tr>
@@ -73,47 +114,10 @@ const handleExportData = (customerId) => {
             </table>
           </div>
 
-          {/* Engagement Metrics Section */}
-          <div className="engagement-metrics">
-            <h2>Engagement Metrics</h2>
-            <div className="metrics">
-              <p>
-                <strong>Lifetime Value (LTV):</strong> ${customer.lifetimeValue}
-              </p>
-              <p>
-                <strong>Average Order Value (AOV):</strong> $
-                {customer.averageOrderValue}
-              </p>
-              <p>
-                <strong>Number of Orders:</strong> {customer.orders.length}
-              </p>
-              <p>
-                <strong>Repeat Customer:</strong>{" "}
-                {customer.isRepeatCustomer ? "Yes" : "No"}
-              </p>
-            </div>
-          </div>
-
-          {/* Communication History Section */}
-          <div className="communication-history">
-            <h2>Communication History</h2>
-            {customer.messages.length ? (
-              <ul>
-                {customer.messages.map((message, index) => (
-                  <li key={index}>
-                    <strong>Date:</strong> {message.date} <br />
-                    <strong>Message:</strong> {message.content}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No communication history available.</p>
-            )}
-          </div>
 
           {/* Actions Section */}
-          <div className="customer-actions">
-            <h2>Actions</h2>
+          <div className="customer-actions ms-auto">
+            
             <button
               className="btn-message"
               onClick={() => handleSendMessage(customer.email)}

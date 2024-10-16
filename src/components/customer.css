@@ -24,45 +24,54 @@
   box-sizing: border-box;
   font-family: var(--font2);
 }
+.customer-page{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 30px;
+  padding:10px;
+
+}
 /* General styles for the customer page */
 .customer {
   color: #333;
   padding:10px;
   float: right;
-  background-color: #f7f7f7;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px ;
+  gap: 20px;
 }
 /* Section Titles */
-.customer-page h2 {
-  font-size: 1.8rem;
+.customer-page h3 {
   margin-bottom: 15px;
   color: var(--delft-blue);
   border-bottom: 2px solid var(--delft-blue);
   padding-bottom: 10px;
 }
 
+.customer .box{
+  max-width: 380px;
+}
 /* Customer Info and Details */
 .customer-info,
 .purchase-history,
 .engagement-metrics,
-.communication-history,
-.customer-actions {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #ffffff;
+.communication-history {
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid grey;
 }
 
-.customer-info:hover,
+/* .customer-info:hover,
 .purchase-history:hover,
 .engagement-metrics:hover,
 .communication-history:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .customer-details p {
   font-size: 1.05rem;
@@ -142,23 +151,39 @@
 /* Actions Section */
 .customer-actions {
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .customer-actions button {
-  background-color: var(--delft-blue);
-  color: white;
   padding: 12px 20px;
-  border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
+.btn-message{
+  /* background: var(--flame); */
+  background: var(--delft-blue);
+  color: white;
+  border: none;
+}
+.btn-refund{
+  background: transparent;
+  /* border: 1px solid var(--flame); */
+  /* color: var(--flame); */
+  border: 1px solid var(--delft-blue);
+  color: var(--delft-blue);
+}
+.btn-export{
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+}
 .customer-actions button:hover {
   background-color: var(--hover);
   transform: translateY(-3px);
+  color: white;
 }
 
 .customer-actions button:focus {
