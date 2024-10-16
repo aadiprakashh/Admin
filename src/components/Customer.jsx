@@ -3,6 +3,19 @@ import "./customer.css"; // Add relevant styles here
 import { customerS } from "../data"; // Assuming customerS contains your customer data
 
 const Customer = () => {
+// Dummy Handlers (replace with actual implementations)
+const handleSendMessage = (email) => {
+  alert(`Sending message to ${email}`);
+};
+
+const handleRefund = (customerId) => {
+  alert(`Issuing refund for customer ID: ${customerId}`);
+};
+
+const handleExportData = (customerId) => {
+  alert(`Exporting data for customer ID: ${customerId}`);
+};
+
   return (
     <div className="customer-page container-fluid">
       {customerS.map((customer) => (
@@ -124,19 +137,6 @@ const Customer = () => {
       ))}
     </div>
   );
-};
-
-// Dummy Handlers (replace with actual implementations)
-const handleSendMessage = (email) => {
-  alert(`Sending message to ${email}`);
-};
-
-const handleRefund = (customerId) => {
-  alert(`Issuing refund for customer ID: ${customerId}`);
-};
-
-const handleExportData = (customerId) => {
-  alert(`Exporting data for customer ID: ${customerId}`);
 };
 
 export default Customer;

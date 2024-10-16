@@ -1,4 +1,6 @@
 import "./productAdd.css";
+import product1 from '../assets/bamboo1.jpeg'
+import product2 from '../assets/bamboo2.jpeg'
 export default function ProductAdd() {
   return (
     <div className="d-flex align-items-start justify-content-between">
@@ -77,10 +79,10 @@ export default function ProductAdd() {
       <div className="productAdd-container col-md-6">
         <div className="productAdd-upload-section">
           <div className="productAdd-image-box">
-            <img src="https://via.placeholder.com/100" alt="Uploaded Image 1" />
+            <img src={product1} alt="Uploaded Image 1" />
           </div>
           <div className="productAdd-image-box">
-            <img src="https://via.placeholder.com/100" alt="Uploaded Image 2" />
+            <img src={product2} alt="Uploaded Image 2" />
           </div>
           <div className="productAdd-image-box productAdd-upload-placeholder">
             <p>

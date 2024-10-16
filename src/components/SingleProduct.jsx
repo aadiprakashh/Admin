@@ -46,7 +46,7 @@ const [quantity, setQuantity] = useState(1);
             </div>
             <div className="product-specfication">
               <header className="product-header">
-                <h2>{product.name}</h2>
+                <h2 className="h2">{product.name}</h2>
                 <p>Product ID: {product.id}</p>
               </header>
 
@@ -193,11 +193,11 @@ const [quantity, setQuantity] = useState(1);
           </div>
 
           {/* Sales Performance and Reviews */}
-          <div className="d-flex align-items-baseline justify-content-between">
+          <div className="">
             <section className=" col-md-12">
               <div className="reviews-ratings">
-                <h2>Reviews and Ratings</h2>
-                <ul className="">
+                <h2 className="h2">Reviews and Ratings</h2>
+                <ul>
                   {product.reviews.map((review, rIndex) => (
                     <li key={rIndex} className="review-card">
                       <div className="d-flex align-items-center ">
