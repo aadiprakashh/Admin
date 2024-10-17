@@ -24,16 +24,13 @@ const Profile = () => {
       <div className="profile-header">
         <div className="profile-picture">
           <img src={sellerProfileData.profile.profilePicture} alt="Profile" />
-          <button>Edit Picture</button>
         </div>
         <div className="store-details">
           <h2>{storeName}</h2>
           <p>{storeDescription}</p>
-          <button>Edit Profile</button>
         </div>
         <div className="store-banner">
           <img src={sellerProfileData.store.bannerImage} alt="Store Banner" />
-          <button>Edit Banner</button>
         </div>
       </div>
 

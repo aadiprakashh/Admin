@@ -203,6 +203,7 @@
     color: var(--delft-blue);
     border: none;
     background: transparent;
+    text-decoration: underline ;
   }
   
   .productAdd-buttons button:hover {

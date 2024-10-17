@@ -243,7 +243,7 @@
     align-items: center;
     gap: 20px;
 }
-  .order > .search, .filter-section > select{
+  .order  .search, .filter-section > select{
     padding:15px;
     border-radius: 15px;
     border: none;

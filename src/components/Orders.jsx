@@ -117,7 +117,7 @@ const Orders = () => {
                 <p>{order.customer}</p>
               </div>
               <div>
-                <p>${order.totalAmount}</p>
+                <p>{order.totalAmount}</p>
               </div>
               <button
                 className="item-btn"

@@ -13,6 +13,15 @@ import watch from "./assets/watch.png";
 import tv from "./assets/tv.png";
 import bambooTumbler from './assets/bambooTumbler.png'
 import banner from './assets/banner.jpg';
+import controller from './assets/controller.jpg';
+import cover from './assets/cover.jpg';
+import stand from './assets/stand.jpg';
+import security from './assets/security.png';
+import usb from './assets/usb.jpeg';
+import tablet from './assets/tablet.jpeg';
+import camera from './assets/camera.webp';
+import cable from './assets/cable.webp';
+import lamp from './assets/lamp.webp';
 // import travelMug;
 // import ceramicMug;
 // import glassBottle;
@@ -446,7 +455,141 @@ export const productPage = [
 
 //order-page
  export  const ordersData = [
-   {
+  {
+    orderNumber: "#12352",
+    date: "2024-09-07",
+    status: "Delivered",
+    customer: "David Wilson",
+    email: "david.wilson@email.com",
+    totalAmount: "$299.00",
+    products: [
+      { name: "Laptop Stand", quantity: 1, price: "$50.00", image: stand },
+      { name: "Noise-Canceling Earbuds", quantity: 1, price: "$99.00", image: buds },
+      { name: "Portable Speaker", quantity: 1, price: "$150.00", image: speaker },
+    ],
+    shippingAddress: "432 Aspen Lane, City, State, 65432, Country",
+    trackingInfo: "Carrier: USPS, Tracking Number: 6789012345",
+  },
+  {
+    orderNumber: "#12353",
+    date: "2024-09-06",
+    status: "Shipped",
+    customer: "Olivia Martinez",
+    email: "olivia.martinez@email.com",
+    totalAmount: "$49.99",
+    products: [
+      { name: "Wireless Earbuds", quantity: 1, price: "$49.99", image: buds },
+    ],
+    shippingAddress: "123 Maple Avenue, City, State, 98765, Country",
+    trackingInfo: "Carrier: DHL, Tracking Number: 7890123456",
+  },
+  {
+    orderNumber: "#12354",
+    date: "2024-09-05",
+    status: "Cancelled",
+    customer: "Henry Miller",
+    email: "henry.miller@email.com",
+    totalAmount: "$90.00",
+    products: [
+      { name: "Smart Lamp", quantity: 1, price: "$90.00", image: lamp },
+    ],
+    shippingAddress: "789 Cherry Street, City, State, 34567, Country",
+    trackingInfo: "No tracking info (Cancelled)",
+  },
+  {
+    orderNumber: "#12355",
+    date: "2024-09-04",
+    status: "Processing",
+    customer: "Sophia Hernandez",
+    email: "sophia.hernandez@email.com",
+    totalAmount: "$210.00",
+    products: [
+      { name: "Tablet", quantity: 1, price: "$180.00", image: tablet },
+      { name: "Tablet Cover", quantity: 1, price: "$30.00", image: cover },
+    ],
+    shippingAddress: "345 Walnut Road, City, State, 98765, Country",
+    trackingInfo: "Carrier: FedEx, Tracking Number: 8901234567",
+  },
+  {
+    orderNumber: "#12356",
+    date: "2024-09-03",
+    status: "Delivered",
+    customer: "William Scott",
+    email: "william.scott@email.com",
+    totalAmount: "$120.00",
+    products: [
+      { name: "Gaming Controller", quantity: 2, price: "$60.00", image: controller },
+    ],
+    shippingAddress: "567 Chestnut Avenue, City, State, 67890, Country",
+    trackingInfo: "Carrier: UPS, Tracking Number: 9012345678",
+  },
+  {
+    orderNumber: "#12357",
+    date: "2024-09-02",
+    status: "Shipped",
+    customer: "Ava Thompson",
+    email: "ava.thompson@email.com",
+    totalAmount: "$99.00",
+    products: [
+      // { name: "Streaming Stick", quantity: 1, price: "$49.00", image: streaming },
+      { name: "HDMI Cable", quantity: 1, price: "$50.00", image: cable },
+    ],
+    shippingAddress: "890 Oak Street, City, State, 45678, Country",
+    trackingInfo: "Carrier: DHL, Tracking Number: 1234567891",
+  },
+  {
+    orderNumber: "#12358",
+    date: "2024-09-01",
+    status: "Processing",
+    customer: "Lily Evans",
+    email: "lily.evans@email.com",
+    totalAmount: "$65.00",
+    products: [
+      { name: "Bluetooth Speaker", quantity: 1, price: "$65.00", image: speaker },
+    ],
+    shippingAddress: "321 Sycamore Drive, City, State, 65432, Country",
+    trackingInfo: "Carrier: USPS, Tracking Number: 2345678902",
+  },
+  {
+    orderNumber: "#12359",
+    date: "2024-08-31",
+    status: "Delivered",
+    customer: "James Clark",
+    email: "james.clark@email.com",
+    totalAmount: "$350.00",
+    products: [
+      { name: "4K Action Camera", quantity: 1, price: "$350.00", image: camera },
+    ],
+    shippingAddress: "654 Pine Street, City, State, 12321, Country",
+    trackingInfo: "Carrier: FedEx, Tracking Number: 3456789013",
+  },
+  {
+    orderNumber: "#12360",
+    date: "2024-08-30",
+    status: "Cancelled",
+    customer: "Ethan Walker",
+    email: "ethan.walker@email.com",
+    totalAmount: "$15.00",
+    products: [
+      { name: "USB Flash Drive", quantity: 1, price: "$15.00", image: usb },
+    ],
+    shippingAddress: "890 Birch Lane, City, State, 67854, Country",
+    trackingInfo: "No tracking info (Cancelled)",
+  },
+  {
+    orderNumber: "#12361",
+    date: "2024-08-29",
+    status: "Shipped",
+    customer: "Chloe Lewis",
+    email: "chloe.lewis@email.com",
+    totalAmount: "$480.00",
+    products: [
+      { name: "Home Security Camera", quantity: 2, price: "$240.00", image: security },
+    ],
+    shippingAddress: "321 Cedar Lane, City, State, 78901, Country",
+    trackingInfo: "Carrier: UPS, Tracking Number: 4567890124",
+  },
+  {
      orderNumber: "#12345",
      date: "2024-09-14",
      status: "Shipped",

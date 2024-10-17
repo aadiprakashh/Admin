@@ -147,6 +147,8 @@ h5 {
     font-size: 1.8em;
     color: var(--delft-blue);
     margin-bottom: 10px;
+    text-align: left;
+
 }
 
 .store-details p {
