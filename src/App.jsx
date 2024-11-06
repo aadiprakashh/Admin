@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -13,23 +13,23 @@ import ProductPage from "./components/Product";
 import CustomerPage from "./components/Customer";
 import ProfilePage from "./components/Profile.jsx";
 import SettingsPage from "./components/Settings.jsx";
-// import SignInPage from "./components/SignInPage.jsx";
+import SignInPage from "./components/SignInPage.jsx";
 import Notifications from "./components/Notification"; // Import Notifications component
 
 function App() {
   // Authentication state
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // // Handle user login
-  // const handleLogin = () => {
-  //   setIsAuthenticated(true); // Set authenticated state to true
-  // };
+  // Handle user login
+  const handleLogin = () => {
+    setIsAuthenticated(true); // Set authenticated state to true
+  };
 
   return (
     <Router>
       <div className="app">
-        {/* {isAuthenticated ? (
-          <> */}
+        {isAuthenticated ? (
+          <>
             <Header />
             <div className="app-content">
               <Routes>
@@ -48,7 +48,7 @@ function App() {
                 <Route exact path="/" element={<Navigate to="/sales" />} />
               </Routes>
             </div>
-          {/* </>
+          </>
         ) : (
           <Routes>
             <Route
@@ -58,7 +58,7 @@ function App() {
             />
             <Route path="*" element={<Navigate to="/signin" />} />
           </Routes>
-        )} */}
+        )}
       </div>
     </Router>
   );
