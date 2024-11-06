@@ -34,7 +34,7 @@ const Sales = () => {
   };
 
   return (
-    <div className="sales" id="main">
+    <div className="sales col-md-10" id="main">
       <div className="sales-content">
         <nav className="d-flex align-items-center col-md-12">
           <form>

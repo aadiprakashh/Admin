@@ -23,6 +23,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font2);
+  font-size: 14px;
 }
 .customer-page{
   display: flex;
@@ -50,10 +51,11 @@
   color: var(--delft-blue);
   border-bottom: 2px solid var(--delft-blue);
   padding-bottom: 10px;
+  font-size: 1rem;
 }
 
 .customer .box{
-  max-width: 380px;
+  max-width: 300px;
 }
 /* Customer Info and Details */
 .customer-info,
@@ -74,7 +76,7 @@
 } */
 
 .customer-details p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   margin: 5px 0;
 }
 
@@ -127,7 +129,7 @@
 
 .metrics p strong {
   color: var(--delft-blue);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Communication History */

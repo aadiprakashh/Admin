@@ -80,7 +80,8 @@ const Orders = () => {
       {/* Order List Section */}
       <div className="order-list col-md-12">
         <ul>
-          <li className="order-item">
+          <li className="order-item" style={{backgroundColor:' #f8f8f8',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', borderRadius:'5px'}}>
             <h4>Order</h4>
             <h4>Date</h4>
             <h4>Status</h4>
@@ -89,7 +90,7 @@ const Orders = () => {
             <h4>More</h4>
           </li>
           {currentOrders.map((order, index) => (
-            <li key={index} className="order-item">
+            <li key={index} className="order-item" style={{borderBottom:'1px solid #dbdbdb'}}>
               <div>
                 <p>{order.orderNumber}</p>
               </div>
