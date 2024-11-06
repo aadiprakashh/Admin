@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 import "./SignInPage.css"; // Use appropriate styles
 
+// eslint-disable-next-line react/prop-types
 function SignInPage({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +15,7 @@ function SignInPage({ onLogin }) {
     // Example logic to simulate login, replace with actual authentication
     if (!email || !password) {
       setError("Email and Password are required.");
-    } else if (email === "admin" && password === "admin") {
+    } else if (email === "seller" && password === "seller") {
       setError("");
       onLogin(); // Call onLogin to mark user as authenticated
       navigate("/sales"); // Redirect to sales page after login
