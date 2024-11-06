@@ -14,7 +14,7 @@ function SignInPage({ onLogin }) {
     // Example logic to simulate login, replace with actual authentication
     if (!email || !password) {
       setError("Email and Password are required.");
-    } else if (email === "seller" && password === "seller") {
+    } else if (email === "admin" && password === "admin") {
       setError("");
       onLogin(); // Call onLogin to mark user as authenticated
       navigate("/sales"); // Redirect to sales page after login
